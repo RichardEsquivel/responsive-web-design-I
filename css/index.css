@@ -242,8 +242,7 @@ footer  {
 
 	.parent-header img.logo {
 		padding-left: 35%;
-		padding-bottom: 4%;
-		width: 65%;
+		width: 70%;
 	}
 
 
@@ -256,6 +255,63 @@ footer  {
 	}
 }
 
+
+@media (max-width: 500px){
+/* Container @ 500px */
+	.container {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	/* Header @ 500px */
+	.parent-header .parent-nav {
+		flex-direction: column;
+		justify-content: center;
+		font-size: 2.25rem;
+	}
+
+	.parent-header .parent-nav a {
+		max-width: 100%;
+		align-self: center;
+		line-height: 1.75;
+	}
+	.parent-header .parent-nav .nav-line {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 100%;
+	margin-top: 1.25%;
+	margin-bottom: 1.25%;
+	}
+	
+	/* Top Section "innovate" @ 500px */
+	.main-body .text-top {
+		flex-direction: column;
+		margin-bottom: 4%;
+	}
+
+	.main-body .text-top .text-content {
+		width: 100%;
+		margin-top: 4%;
+		margin-bottom: 4%;
+	}
+	/* Bottom Section @ 500px */
+	.main-body .text-bottom {
+		flex-direction: column;
+		margin-top: 4%;
+	}
+
+	.main-body .text-bottom .text-content {
+		width: 100%;
+		margin-top: 4%;
+		margin-bottom: 4%;
+	}
+
+	/* Footer @ 500px */
+	footer {
+		margin-left: 35%;
+	}
+
+
+}
 	
 
 
