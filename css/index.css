@@ -72,9 +72,7 @@ h1, h2, h3, h4, h5 {
 	margin: 0 auto;
 }
 
-body {
-	margin: 0 auto;
-}
+
 /* Header */
 
 .parent-header {
@@ -103,7 +101,7 @@ body {
 }
 
 /*Great Idea Logo*/
-header img.logo {
+.parent-header img.logo {
 	padding-top: 2.0%;
 	margin-top: 3.5%;
 }
@@ -120,6 +118,7 @@ header img.logo {
 	flex-direction: column;
 	align-items: center;
 	margin-left: 6.0%;
+	margin-bottom: 4%;
 }
 
 .innovate-child h1 {
@@ -156,18 +155,22 @@ innovate-parent .roundcode {
 	border-bottom: 1.25px solid black;
 	padding-top: 4%;
 	padding-bottom: 4%;
+	margin: 0 4% 0% 4%;
 }
 
  .main-body .text-top {
 	display:flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 .main-body .text-top .text-content {
 	display:flex;
 	flex-direction: column;
 	font-size: 1.75rem;
+	width: 49%;
 	margin-bottom: 4%;
+
 }
 
 
@@ -188,6 +191,9 @@ margin-top: 4%;
 .main-body .text-bottom .text-content {
 	display: flex;
 	flex-direction: column;
+	width: 31%;
+	justify-content: space-between;
+
 }
 
 /*Contact Section */
@@ -195,6 +201,7 @@ margin-top: 4%;
 	display:flex;
 	flex-direction: column;
 	font-size: 1.75rem;
+	margin-left: 4%;
 	padding-top: 4%;
 }
 
@@ -215,4 +222,47 @@ footer  {
 }
 
 /*Media Query @800px */
+
+@media (max-width: 800px) {
+/* Container @ 800px */
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+	}	
+
+
+/* Header Section @ 800px */
+	.parent-header {
+		flex-direction: column-reverse;
+	}
+
+	.parent-header .parent-nav {
+		width: 100%;
+	}
+
+	.parent-header img.logo {
+		padding-left: 35%;
+		padding-bottom: 4%;
+		width: 65%;
+	}
+
+
+	.innovate-parent .innovate-child {
+		margin-left: 0%;
+		margin-right: 4%;
+	}
+	.innovate-parent img.roundCode {
+		display: none;
+	}
+}
+
+	
+
+
+
+
+
+
+
+
 
