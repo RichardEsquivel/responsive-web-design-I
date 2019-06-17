@@ -68,38 +68,32 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 .container {
-	display: flex;
-	flex-wrap: wrap;
-	width: 1050px;
+	max-width: 1050px;
 	margin: 0 auto;
 }
 
 body {
-	margin: 0 5%;
+	margin: 0 auto;
 }
 /* Header */
 
 .parent-header {
 	display:flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
-	width: 95%;
 	padding-top: 1%;
 	margin-bottom: 5%;
 }
 /* Top Navigation Bar*/
 .parent-header .parent-nav {
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width: 75%;
+	justify-content: space-between;
+	width: 80%;
 	margin-top: 2%;
 	font-size: 2.0rem;
 	font-family: 'Oswald', sans-serif;
 }
 
 .parent-header .parent-nav a {
-	width: 15%;
 	text-decoration: none;
 	color: grey;
 }
@@ -113,107 +107,112 @@ header img.logo {
 	padding-top: 2.0%;
 	margin-top: 3.5%;
 }
-/* Top Section */
-.innovate {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 8%;
-	margin-left: 5%;
+/* Top Section tiled "innovate" */
+.innovate-parent {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
 	margin-bottom: 5%;
-	padding-bottom:5%;
-	width: 45%;
 }
 
-.innovate section {
+.innovate-parent .innovate-child {
 	display:flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	margin-left: 6.0%;
 }
 
-.innovate section h1 {
-	font-size: 9rem;
+.innovate-child h1 {
+	padding-top: 8%;
+	font-size: 7rem;
 	text-align: center;
 }
 
-.innovate section button{
+.innovate-child  button{
 	border: 1.10px solid black;
 	background-color: white;
 	color: black;
-	padding: 3% 12%;
+	padding: 2% 13%;
 	font-size: 1.5rem;
 	cursor: pointer;
 }
 
-.innovate section button:hover {
+.innovate-parent button:hover {
 	background:black;
 	color:white;
 }
-
-
-.container .roundCode {
+/* Top Section round code image*/
+innovate-parent .roundcode {
 	display:flex;
-	width: 40%;
-	height: 20%;
+	width: 10%;
+	height: 8%;
 	margin-top: 4%;
-	margin-left: 10%;
 	margin-bottom: 3%;
 }
 
-.container .boxTextTop{
+/* Top Text Content*/
+.main-body {
 	border-top: 1.25px solid black;
+	border-bottom: 1.25px solid black;
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
 
- .container .boxTextTop section{
+ .main-body .text-top {
 	display:flex;
-	width: 48%;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	flex-direction: row;
+}
+
+.main-body .text-top .text-content {
+	display:flex;
+	flex-direction: column;
 	font-size: 1.75rem;
-	margin-top: 4%;
 	margin-bottom: 4%;
 }
 
+
+/* Banner image middle of page */
 img.middle-img {
-	width: 100%;
+	width:100%;
 }
 
-
-.container .boxTextBottom section{
+/* Bottom Text Content */
+.main-body .text-bottom {
 display:flex;
-flex-wrap: wrap;
+flex-direction: row;
 justify-content: space-between;
-width: 33%;
 font-size: 1.75rem;
 margin-top: 4%;
-margin-bottom: 4%;
-}
-.container .boxTextBottom{
-	border-bottom: 1.25px solid black;
 }
 
+.main-body .text-bottom .text-content {
+	display: flex;
+	flex-direction: column;
+}
 
+/*Contact Section */
 .contact-section {
 	display:flex;
 	flex-direction: column;
 	font-size: 1.75rem;
-	padding-top: 5%;
+	padding-top: 4%;
 }
 
 .contact-section address {
-	padding-bottom: 15%;
+	padding-bottom: 2%;
 }
 
 .contact-section .phoneNumber{
-	padding-bottom: 15%;
+	padding-bottom: 2%;
 }
-
+/* Footer  bottom only incldues Copyright */
 footer  {
-	margin: 15% 0% 0% 30%;
+	margin: 2% 0% 0% 45%;
 	font-family: 'Oswald', sans-serif;
 	padding: 5% 0;
 	font-size: 1.75rem;
 
 }
+
+/*Media Query @800px */
 
