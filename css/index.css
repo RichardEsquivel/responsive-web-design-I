@@ -1,3 +1,324 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	font-size: 62.5%;
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+.container {
+	max-width: 1050px;
+	margin: 0 auto;
+}
+
+
+/* Header */
+
+.parent-header {
+	display:flex;
+	justify-content: space-between;
+	padding-top: 1%;
+	margin-bottom: 5%;
+}
+/* Top Navigation Bar*/
+.parent-header .parent-nav {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin-top: 2%;
+	font-size: 2.0rem;
+	font-family: 'Oswald', sans-serif;
+}
+
+.parent-header .parent-nav a {
+	text-decoration: none;
+	color: grey;
+}
+
+.parent-header .parent-nav a:hover {
+	text-decoration: underline;
+}
+
+/*Great Idea Logo*/
+.parent-header img.logo {
+	padding-top: 2.0%;
+	margin-top: 3.5%;
+}
+/* Top Section tiled "innovate" */
+.innovate-parent {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 5%;
+}
+
+.innovate-parent .innovate-child {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 6.0%;
+	margin-bottom: 4%;
+}
+
+.innovate-child h1 {
+	padding-top: 8%;
+	font-size: 7rem;
+	text-align: center;
+}
+
+.innovate-child  button{
+	border: 1.10px solid black;
+	background-color: white;
+	color: black;
+	padding: 2% 13%;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.innovate-parent button:hover {
+	background:black;
+	color:white;
+}
+/* Top Section round code image*/
+innovate-parent .roundcode {
+	display:flex;
+	width: 10%;
+	height: 8%;
+	margin-top: 4%;
+	margin-bottom: 3%;
+}
+
+/* Top Text Content*/
+.main-body {
+	border-top: 1.25px solid black;
+	border-bottom: 1.25px solid black;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	margin: 0 4% 0% 4%;
+}
+
+ .main-body .text-top {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.main-body .text-top .text-content {
+	display:flex;
+	flex-direction: column;
+	font-size: 1.75rem;
+	width: 49%;
+	margin-bottom: 4%;
+
+}
+
+
+/* Banner image middle of page */
+img.middle-img {
+	width:100%;
+}
+
+/* Bottom Text Content */
+.main-body .text-bottom {
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+font-size: 1.75rem;
+margin-top: 4%;
+}
+
+.main-body .text-bottom .text-content {
+	display: flex;
+	flex-direction: column;
+	width: 31%;
+	justify-content: space-between;
+
+}
+
+/*Contact Section */
+.contact-section {
+	display:flex;
+	flex-direction: column;
+	font-size: 1.75rem;
+	margin-left: 4%;
+	padding-top: 4%;
+}
+
+.contact-section address {
+	padding-bottom: 2%;
+}
+
+.contact-section .phoneNumber{
+	padding-bottom: 2%;
+}
+/* Footer  bottom only incldues Copyright */
+footer  {
+	margin: 2% 0% 0% 45%;
+	font-family: 'Oswald', sans-serif;
+	padding: 5% 0;
+	font-size: 1.75rem;
+
+}
+
+/*Media Query @800px */
+
+@media (max-width: 800px) {
+/* Container @ 800px */
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+	}	
+
+
+/* Header Section @ 800px */
+	.parent-header {
+		flex-direction: column-reverse;
+	}
+
+	.parent-header .parent-nav {
+		width: 100%;
+	}
+
+	.parent-header img.logo {
+		padding-left: 35%;
+		width: 70%;
+	}
+
+
+	.innovate-parent .innovate-child {
+		margin-left: 0%;
+		margin-right: 4%;
+	}
+	.innovate-parent img.roundCode {
+		display: none;
+	}
+}
+
+
+@media (max-width: 500px){
+/* Container @ 500px */
+	.container {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	/* Header @ 500px */
+	.parent-header .parent-nav {
+		flex-direction: column;
+		justify-content: center;
+		font-size: 2.25rem;
+	}
+
+	.parent-header .parent-nav a {
+		max-width: 100%;
+		align-self: center;
+		line-height: 1.75;
+	}
+	.parent-header .parent-nav .nav-line {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 100%;
+	margin-top: 1.25%;
+	margin-bottom: 1.25%;
+	}
+	
+	/* Top Section "innovate" @ 500px */
+	.main-body .text-top {
+		flex-direction: column;
+		margin-bottom: 4%;
+	}
+
+	.main-body .text-top .text-content {
+		width: 100%;
+		margin-top: 4%;
+		margin-bottom: 4%;
+	}
+	/* Bottom Section @ 500px */
+	.main-body .text-bottom {
+		flex-direction: column;
+		margin-top: 4%;
+	}
+
+	.main-body .text-bottom .text-content {
+		width: 100%;
+		margin-top: 4%;
+		margin-bottom: 4%;
+	}
+
+	/* Footer @ 500px */
+	footer {
+		margin-left: 35%;
+	}
+
+
+}
+	
+
+
+
+
+
+
+
 
 
